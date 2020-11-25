@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<log4j:configuration debug="true">
+
+    <!-- ?? ?? -->
+    <appender name="console" class="org.apache.log4j.ConsoleAppender">
+        <!-- ?? ???? ??.. -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %p [%c{5}] %m [%X{userId}]%n" />
+        </layout>
+    </appender>
+
+    <!-- ??? ?? ?? ?? -->
+    <appender name="rollingFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <!-- ????  ??? ??. ???.???.DatePattern?? ?? ?-->
+        <param name="File" value="/LOG/all.log"/>
+        <param name="Append" value="true"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %p [%C{10}] %m [%X{userId}]%n" />
+        </layout>
+    </appender>
+
+    <!-- ??? ?? ?? ?? -->
+    <appender name="springFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/LOG/spring.log"/>
+        <param name="Append" value="true"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %p [%C{10}] %m [%X{userId}]%n" />
+        </layout>
+    </appender>
+
+    <!-- ??? ?? ?? ??(???) -->
+    <appender name="errFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="Threshold" value="ERROR"/>
+        <param name="File" value="/LOG/error.log"/>
+        <param name="Append" value="true"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %5p [%C{1}] %m [%X{userId}]%n" />
+        </layout>
+    </appender>
+
+    <!-- ?? ???? ???? ??-->
+    <appender name="rolling" class="org.apache.log4j.RollingFileAppender">
+        <param name="file" value="I:/log/log.log"/>
+        <param name="Append" value="true"/>
+        <param name="MaxFileSize" value="1MB"/>
+        <param name="MaxBackupIndex" value="1"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%t> [%d{yyyy-MM-dd HH:mm:ss}] [%c{1}] [%L] [%p] %m %n"/>
+        </layout>
+    </appender>
+
+    <!-- ?? ??? ?? ?? -->
+    <logger name="org.apache.ibatis">
+        <level value="DEBUG"/>
+    </logger>
+    <logger name="org.springframework">
+        <level value="DEBUG"/>
+        <appender-ref ref="springFile" />
+    </logger>
+    <logger name="java.sql">
+        <level value="DEBUG"/>
+    </logger>
+
+    <!-- ??? ?? ?? ??? ???? ?? -->
+    <category name="example" additivity="false">
+        <level value="DEBUG"/>
+        <appender-ref ref="console" />
+        <appender-ref ref="rollingFile" />
+    </category>
+
+    <!-- ????? ?? ? ?? ??, appender-ref ? ?? ?? appender ?? -->
+    <root>
+        <level value="DEBUG" />
+        <appender-ref ref="console" />
+        <appender-ref ref="errFile"/>
+        <appender-ref ref="rollingFile"/>
+    </root>
+
+</log4j:configuration>

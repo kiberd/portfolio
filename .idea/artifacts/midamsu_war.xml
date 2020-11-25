@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="midamsu:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/midamsu_war</output-path>
+    <root id="archive" name="midamsu_war.war">
+      <element id="artifact" artifact-name="midamsu:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="comment">
+
+    <select id="read" resultType="com.midamsu.comment.vo.CommentVO">
+        select * from mvc_comment where bId = #{bId} order by cGroup asc , cStep asc
+    </select>
+
+    <insert id="insert">
+        insert into mvc_comment (cId, bId, cGroup, cStep, cIntent, cContent, cName, cEmail, deleteFlag, social)
+        values (mvc_comment_seq.nextval, #{bId}, mvc_comment_seq.currval, 0, 0, #{content}, #{cName}, #{cEmail}, 1, #{social})
+    </insert>
+
+    <insert id="reinsert">
+        insert into mvc_comment (cId, bId, cParent, cGroup, cStep, cIntent, cContent, cName, cEmail, deleteFlag, social)
+        values (mvc_comment_seq.nextval, #{bId}, #{cId}, #{cGroup} ,#{cStep} ,#{cIntent},#{cContent}, #{cName}, #{cEmail}, 1, #{social})
+    </insert>
+
+    <select id="getChildNum" resultType="int">
+        select count(*) from(
+                                SELECT
+                                cid,
+                                LEVEL
+                                FROM mvc_comment
+                                START WITH cId = #{cId}
+                                CONNECT BY PRIOR cid = cparent
+                            )
+    </select>
+
+    <update id="shape" >
+        update mvc_comment set cStep = cStep + 1 where cGroup = #{cGroup} and cStep > #{cStep}
+    </update>
+
+    <update id="delete">
+        delete from mvc_comment where cId = #{cId}
+    </update>
+
+    <update id="deleteflag">
+        update mvc_comment set deleteFlag = 0 where cId = #{cId}
+    </update>
+
+    <update id="update">
+        update mvc_comment set cContent = #{cContent} where cId = #{cId}
+    </update>
+
+
+</mapper>

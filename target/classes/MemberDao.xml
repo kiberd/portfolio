@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+
+    <insert id="memberInsert" parameterType="com.midamsu.member.vo.MemberVO">
+        insert into members
+        values (#{memId}, #{memPw,jdbcType=VARCHAR}, #{memName}, #{memPhone,jdbcType=VARCHAR} , #{memAddress,jdbcType=VARCHAR}, #{social,jdbcType=VARCHAR}, #{authStatus,jdbcType=VARCHAR},#{authkey,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="socialRegister">
+        update members set pw = null, social = '0',authstatus = '0', name = #{memName} where id = #{memId}
+    </update>
+
+    <select id="userCheck" resultType="com.midamsu.member.vo.MemberVO">
+        select  id as memId,
+                pw as memPw,
+                social,
+                authStatus
+                from members where id = #{memId}
+    </select>
+
+    <select id="getMemberVO" resultType="com.midamsu.member.vo.MemberVO">
+         select id as memId,
+               name as memName,
+               pw as memPw,
+               pnumber as memPhone,
+               address as memAddress,
+               authkey,
+               social
+               from members where id = #{memId}
+    </select>
+
+    <select id="userIdCheck" resultType="string">
+        select id from members where id =#{memId}
+    </select>
+
+    <update id="setAuthkey">
+        update members set authkey = #{authkey} where id = #{memId}
+    </update>
+
+    <update id="setAuthStatus">
+        update members set authstatus = '0' where id = #{memId}
+    </update>
+
+    <update id="memberModify">
+        update members set name = #{memName}, pnumber = #{memPhone}, address = #{memAddress} where id = #{memId}
+    </update>
+
+    <delete id="memberDelete">
+        delete from members where id = #{memId}
+    </delete>
+
+    <select id="getMyContents"  resultType="com.midamsu.board.vo.BoardVO">
+        <![CDATA[
+        select * from
+                      (
+                          select
+                              rownum rn, bId, email, bName, bTitle, bContent, bDate, bHit, bGroup, bStep, bIndent, ccount
+                          from (
+                                  select bId, email, bName, bTitle, bContent, bDate, bHit, bGroup, bStep, bIndent, ccount
+                                  from mvc_board
+                                  where email = #{memId}
+                                  order by bGroup desc, bStep asc
+                          )
+                          where rownum < #{endIndex}
+                      )
+                      where rn >= #{startIndex}
+
+        ]]>
+    </select>
+
+    <select id="getMyComments"  resultType="com.midamsu.comment.vo.CommentVO">
+        <![CDATA[
+        select * from
+                      (
+                          select
+                              rownum rn, cId, bId, cContent, cDate, cGroup
+                          from (
+                                  select cId, bId, cContent, cDate, cGroup
+                                  from mvc_comment
+                                  where cemail = #{memId}
+                                  order by cGroup desc
+                          )
+                          where rownum < #{endIndex}
+                      )
+                      where rn >= #{startIndex}
+
+        ]]>
+    </select>
+
+
+
+
+
+
+
+
+</mapper>
