@@ -45,7 +45,7 @@ public class MemberController {
     @Autowired
     CommonService commonService;
     @Autowired
-    private MailSendService mss;
+    MailSendService mss;
     @Autowired
     BCryptPasswordEncoder bCryptPasswordEncoder;
 
