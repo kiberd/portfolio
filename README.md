@@ -52,6 +52,8 @@
    - 해당 글 작성자일 경우에만, 해당 글 수정, 삭제 가능
    - Paging 기능 (앞, 뒤 4개까지)  
    - 내가 쓴 게시물(글, 댓글) 보기 기능 
+   - 텍스트 에디터 중 하나인 SummerNote 사용
+   - 파일첨부 기능
    
    ![Alt text](http://kiberd.dothome.co.kr/portfolio/paging.PNG)
    ![Alt text](http://kiberd.dothome.co.kr/portfolio/mycontent.PNG)
@@ -68,3 +70,10 @@
    - 만약 자식노드(대댓글)가 존재하면 삭제 불가 -> 비공개처리 (deleteFlag)
    
    ![Alt text](http://kiberd.dothome.co.kr/portfolio/대댓글.png)
+
+***
+
+* **예외 처리**
+
+   - web.xml의 errorpage 설정을 통한 404, 400, 500 에러 처리
+   - 파일첨부의 경우 MultipartResolver 의 Execption을 통한 예외처리 
