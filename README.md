@@ -1,13 +1,13 @@
 ## Spring Framework를 이용한 게시판 형태의 CRUD 시스템
 
-* 간단하면 간단할 수 있지만, 모든 CRUD 시스템의 기초가 될 수 있는 
-  게시판을 구현함으로써 그 동작원리를 명확히 이해
+* 간단하면 간단할 수 있지만, 모든 CRUD 시스템의 기초가 될 수 있는 게시판을 구현함으로써 그 동작원리를 명확히 이해
 * 개발시 사용한 스프링프레임워크의 장점(유지보수용이, 웹개발에 최적화된 구조, 협업용이 등)들을 MVC모델 구현을 통해 이해
 * AWS (EC2, RDS), 웹서버 (Nginx), WAS (Tomcat) 등을 사용한 웹호스팅을 통해, 웹의 동작구조 및 개념을 명확히 이해
 
 ***
 
 * **개발환경** 
+
   - *IDE* : Intellij 
   - *Frontend* :  HTML + CSS(Bootstrap) + Javascript(Jquery) + JSP
   - *Backend* : Spring MVC
