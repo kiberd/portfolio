@@ -67,4 +67,4 @@
    - ajax이용 댓글 리스트 실시간 업데이트 
    - 만약 자식노드(대댓글)가 존재하면 삭제 불가 -> 비공개처리 (deleteFlag)
    
-   ![Alt text](http://kiberd.dothome.co.kr/portfolio/대댓글.)
+   ![Alt text](http://kiberd.dothome.co.kr/portfolio/대댓글.png)
