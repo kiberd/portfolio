@@ -71,9 +71,3 @@
    
    ![Alt text](http://kiberd.dothome.co.kr/portfolio/대댓글.png)
 
-***
-
-* **예외 처리**
-
-   - web.xml의 errorpage 설정을 통한 404, 400, 500 에러 처리
-   - 파일첨부의 경우 MultipartResolver 의 Execption을 통한 예외처리 
