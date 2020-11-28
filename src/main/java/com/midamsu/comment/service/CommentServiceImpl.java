@@ -56,7 +56,7 @@ public class CommentServiceImpl implements CommentService {
         newIntent = oldIntent + 1;
 
         // 새로 설정된 indexing 정보 map에 삽입
-        map.put("cStep", newStep);
+        map.put("cSgit tep", newStep);
         map.put("cIntent", newIntent);
 
         commentDao.insertRe(map);

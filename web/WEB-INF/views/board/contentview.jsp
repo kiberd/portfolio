@@ -197,8 +197,6 @@
                     <td colspan="6">${content_view.BContent}</td>
                 </tr>
 
-
-
                 <tr>
                     <th scope="row"><h5 style="opacity: 0.8">첨부파일</h5></th>
                     <td colspan="6">
