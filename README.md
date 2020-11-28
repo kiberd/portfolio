@@ -11,3 +11,5 @@
  6. Hosting : AWS Route 53
  
 * **Web Schema** 
+
+![Alt text](http://kiberd.dothome.co.kr/portfolio/web.png)
