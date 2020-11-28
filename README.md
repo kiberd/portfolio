@@ -46,8 +46,7 @@
 
    - 회원일 경우에만 글 쓰기, 수정, 삭제 가능
    - 해당 글 작성자일 경우에만, 해당 글 수정, 삭제 가능
-   - Paging 기능 (앞, 뒤 4개까지)
-![Alt text](http://kiberd.dothome.co.kr/portfolio/paging.PNG)
-   - 내가 쓴 게시물(글, 댓글) 보기 기능 
-![Alt text](http://kiberd.dothome.co.kr/portfolio/mycontent.PNG)
+   - Paging 기능 (앞, 뒤 4개까지)  ![Alt text](http://kiberd.dothome.co.kr/portfolio/paging.PNG)
+   - 내가 쓴 게시물(글, 댓글) 보기 기능  ![Alt text](http://kiberd.dothome.co.kr/portfolio/mycontent.PNG)
+
 * **댓글 기능** 
