@@ -2,7 +2,7 @@
 
 ***
 
-* **개발환경** 
+* ##**개발환경** 
   - *IDE* : Intellij 
   - *Frontend* :  HTML + CSS(Bootstrap) + Javascript(Jquery) + JSP
   - *Backend* : Spring MVC
