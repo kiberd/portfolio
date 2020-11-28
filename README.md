@@ -2,7 +2,7 @@
 
 ***
 
-* ##**개발환경** 
+* **개발환경** 
   - *IDE* : Intellij 
   - *Frontend* :  HTML + CSS(Bootstrap) + Javascript(Jquery) + JSP
   - *Backend* : Spring MVC
@@ -30,3 +30,14 @@
   - MVC_FILE : 파일 관리 테이블 
     + DELETE_BOARD_FILE : 원글삭제 -> 원글첨부파일삭제
 ![Alt text](http://kiberd.dothome.co.kr/portfolio/dbmodel.PNG)
+
+
+* **회원관리 기능** 
+
+   - email을 id로 사용하는 회원관리 시스템 
+   - 구글, 네이버, 카카오 3가지 플랫폼 소셜 로그인 제공
+   ![Alt text](http://kiberd.dothome.co.kr/portfolio/로그인로직.png)
+
+
+* **게시판 기능** 
+* **댓글 기능** 
