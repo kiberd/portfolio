@@ -25,7 +25,8 @@
   - MVC_BOARD : 게시판 테이블
     + DELETE_MEMBER_BOARD : 멤버삭제 -> 멤버글삭제
   - MVC_COMMENT : 댓글 테이블  
-    + DELETE_MEMBER_COMMENT : 멤버삭제 -> 멤버댓글삭제 , DELETE_BOARD_COMMENT : 원글삭제 -> 원글댓글삭제
+    + DELETE_MEMBER_COMMENT : 멤버삭제 -> 멤버댓글삭제 
+    + DELETE_BOARD_COMMENT : 원글삭제 -> 원글댓글삭제
   - MVC_FILE : 파일 관리 테이블 
     + DELETE_BOARD_FILE : 원글삭제 -> 원글첨부파일삭제
 ![Alt text](http://kiberd.dothome.co.kr/portfolio/dbmodel.PNG)
