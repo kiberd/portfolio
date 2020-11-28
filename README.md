@@ -2,7 +2,7 @@
 
 ***
 
-* 개발환경 
+* **개발환경** 
  1. IDE : Intellij 
  2. Frontend :  HTML + CSS(Bootstrap) + Javascript(Jquery) + JSP
  3. Backend : Spring MVC
@@ -10,4 +10,4 @@
  5. Database : AWS RDS DB (Oracle)
  6. Hosting : AWS Route 53
  
-* Web Schema 
+* **Web Schema** 
