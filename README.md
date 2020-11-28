@@ -36,6 +36,8 @@
 
    - email을 id로 사용하는 회원관리 시스템 
    - 구글, 네이버, 카카오 3가지 플랫폼 소셜 로그인 제공
+   
+   
    ![Alt text](http://kiberd.dothome.co.kr/portfolio/로그인로직.png)
 
 
