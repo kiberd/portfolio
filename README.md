@@ -36,7 +36,7 @@
     + DELETE_BOARD_COMMENT : 원글삭제 -> 원글댓글삭제
   - MVC_FILE : 파일 관리 테이블 
     + DELETE_BOARD_FILE : 원글삭제 -> 원글첨부파일삭제
-![Alt text](http://kiberd.dothome.co.kr/portfolio/dbmodel.PNG)
+
 
 ***
 
@@ -44,11 +44,9 @@
 
    - email을 id로 사용하는 회원관리 시스템 
    - 구글, 네이버, 카카오 3가지 플랫폼 소셜 로그인 제공
-   - 로그인 흐름도
+ 
    
    
-   ![Alt text](http://kiberd.dothome.co.kr/portfolio/로그인로직.png)
-
 ***
 
 * **게시판 기능** 
@@ -60,9 +58,6 @@
    - 텍스트 에디터 중 하나인 SummerNote 사용
    - 파일첨부 기능
    
-   ![Alt text](http://kiberd.dothome.co.kr/portfolio/paging.PNG)
-   ![Alt text](http://kiberd.dothome.co.kr/portfolio/mycontent.PNG)
-   ![Alt text](http://kiberd.dothome.co.kr/portfolio/write.png)
 ***
 
 * **댓글 기능** 
@@ -75,7 +70,6 @@
    - ajax이용 댓글 리스트 실시간 업데이트 
    - 만약 자식노드(대댓글)가 존재하면 삭제 불가 -> 비공개처리 (deleteFlag)
    
-   ![Alt text](http://kiberd.dothome.co.kr/portfolio/대댓글.png)
    
 ***
 
